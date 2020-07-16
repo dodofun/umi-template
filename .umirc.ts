@@ -15,4 +15,5 @@ export default defineConfig({
     type: 'none',
   },
   routes: routes,
+  dynamicImport: {},
 });
