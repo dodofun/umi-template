@@ -7,13 +7,23 @@ export const routes = [
   {
     path: '/',
     component: '@/layouts/index',
+    wrappers: ['@/routes/wrappers/auth'],
     routes: [
       {
         title: 'Index',
         path: '/index',
         component: '@/pages/index',
         // redirect: '/', // 路由重定向
-        wrappers: ['@/routes/wrappers/auth'],
+      },
+      {
+        title: 'pageOne',
+        path: '/pageOne',
+        component: '@/pages/pageOne',
+      },
+      {
+        title: 'pageTwo',
+        path: '/pageTwo',
+        component: '@/pages/pageTwo',
       },
       {
         component: '@/pages/404',

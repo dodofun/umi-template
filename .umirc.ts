@@ -38,9 +38,9 @@ export default defineConfig({
   routes,
   proxy,
   dynamicImport: {
-    loading: '@/components/loading', // 页面加载组件
+    loading: '@/components/Loading', // 页面加载组件
   },
-  chunks: PROD ? ['vendors', 'antd', 'umi'] : ['umi'],
+  // chunks: PROD ? ['vendors', 'antd', 'umi'] : ['umi'],
   chainWebpack: PROD ? chainWebpack : false,
   cssLoader: {
     localsConvention: 'camelCase',
@@ -108,7 +108,11 @@ export default defineConfig({
     ],
   },
   targets: {
-    ie: 11,
+    chrome: 79,
+    firefox: false,
+    safari: false,
+    edge: false,
+    ios: false,
   },
   terserOptions: {},
 });

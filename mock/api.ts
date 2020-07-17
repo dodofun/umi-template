@@ -1,8 +1,9 @@
+// @ts-ignore
 import mockjs from 'mockjs';
 
 export default {
   // 支持值为 Object 和 Array
-  'GET /api/users': mockjs.mock({
+  'GET /api/citys': mockjs.mock({
     'list|100': [{ name: '@city', 'value|1-100': 50, 'type|0-2': 1 }],
   }),
   // GET 可忽略

@@ -18,8 +18,14 @@ const chainWebpack = (config, { webpack }) => {
           vendors: {
             name: 'vendors',
             chunks: 'all',
-            test: /[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|lodash|lodash-decorators|dva|moment)[\\/]/,
+            test: /[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|dva|moment)[\\/]/,
             priority: -10,
+          },
+          lodash: {
+            name: 'lodash',
+            chunks: 'all',
+            test: /[\\/]node_modules[\\/](lodash|lodash-decorators)[\\/]/,
+            priority: -12,
           },
           antd: {
             name: 'antd',
