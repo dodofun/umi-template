@@ -1,4 +1,4 @@
-import mockjs from 'mockjs'
+import mockjs from 'mockjs';
 
 export default {
   // 支持值为 Object 和 Array
@@ -13,4 +13,4 @@ export default {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.end('ok');
   },
-}
+};

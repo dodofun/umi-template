@@ -1,4 +1,9 @@
 {
+  "name": "umi-template",
+  "version": "1.0.0",
+  "keywords": [],
+  "description": "",
+  "author": "dodofun",
   "private": true,
   "scripts": {
     "start": "umi dev",
@@ -24,6 +29,7 @@
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.2.10",
     "lint-staged": "^10.0.7",
+    "mockjs": "^1.1.0",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -31,6 +37,15 @@
     "yorkie": "^2.0.0"
   },
   "devDependencies": {
-    "@types/mockjs": "^1.0.2"
+    "@umijs/preset-ui": "^2.2.2",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "compression-webpack-plugin": "^4.0.0",
+    "cssnano-preset-advanced": "^4.0.7",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "postcss-aspect-ratio-mini": "^1.0.1",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-viewport-units": "^0.1.6",
+    "postcss-write-svg": "^3.0.1"
   }
 }
