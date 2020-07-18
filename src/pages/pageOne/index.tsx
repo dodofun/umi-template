@@ -2,10 +2,9 @@ import React, { Suspense, useEffect, useMemo, useState } from 'react';
 import styles from './index.less';
 import { Link } from 'umi';
 import { useDispatch, useSelector, useStore } from '@@/plugin-dva/exports';
+import { ThemeContext } from '@/utils/context';
 
 const LazyComponent = React.lazy(() => import('@/components/DemoLazy.tsx'));
-// context生产
-export const Context = React.createContext('light');
 
 export default (props: any) => {
   // 获取 dispatch
@@ -49,9 +48,9 @@ export default (props: any) => {
         Page Demo {count}
       </h1>
       <Link to="/">To Index Page</Link>
-      <Context.Provider value="dark">
+      <ThemeContext.Provider value="dark">
         <Suspense fallback={<div>Loading...</div>}>{lazuComponent}</Suspense>
-      </Context.Provider>
+      </ThemeContext.Provider>
     </div>
   );
 };

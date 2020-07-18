@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react';
-import { Context } from '@/utils/context';
+import { ThemeContext } from '@/utils/context';
 
 const DemoLazy = (props: any) => {
   console.log('props', props);
   // context消费
-  const context = useContext(Context);
-  console.log('context', context);
+  const themeContext = useContext(ThemeContext);
+  console.log('themeContext', themeContext);
 
   useEffect(() => {
     return () => {
