@@ -1,7 +1,6 @@
 import { apiTest } from '@/services';
 
 const IndexModel = {
-  namespace: 'index',
   state: {
     count: 0,
   },

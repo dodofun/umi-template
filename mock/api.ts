@@ -3,8 +3,10 @@ import mockjs from 'mockjs';
 
 export default {
   // 支持值为 Object 和 Array
-  'GET /api/citys': mockjs.mock({
-    'list|100': [{ name: '@city', 'value|1-100': 50, 'type|0-2': 1 }],
+  'GET /api/citys': mockjs.mock(() => {
+    return {
+      'list|100': [{ name: '@city', 'value|1-100': 50, 'type|0-2': 1 }],
+    };
   }),
   // GET 可忽略
   '/api/users/1': { id: 1 },

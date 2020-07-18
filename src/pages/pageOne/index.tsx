@@ -1,19 +1,23 @@
 import React, { Suspense, useEffect, useMemo, useState } from 'react';
 import styles from './index.less';
-import { connect } from 'dva';
 import { Link } from 'umi';
+import { useDispatch, useSelector, useStore } from '@@/plugin-dva/exports';
+
 const LazyComponent = React.lazy(() => import('@/components/DemoLazy.tsx'));
 // context生产
 export const Context = React.createContext('light');
 
-// @ts-ignore
-export default connect(({ index }) => ({
-  index,
-}))((props: any) => {
-  const {
-    dispatch,
-    index: { count },
-  } = props;
+export default (props: any) => {
+  // 获取 dispatch
+  const dispatch = useDispatch();
+  // 获取 state
+  const count = useSelector((state: any) => {
+    const index = state.index;
+    return index.count;
+  });
+  // 获取 store
+  const store = useStore();
+  console.log('store', store.getState());
 
   const [stateDemo, setStateDemo] = useState(() => {
     // 当初始化逻辑复杂时，可通过匿名函数来惰性初始化，该函数当且仅当初始化时被调用
@@ -50,4 +54,4 @@ export default connect(({ index }) => ({
       </Context.Provider>
     </div>
   );
-});
+};

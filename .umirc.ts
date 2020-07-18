@@ -115,4 +115,8 @@ export default defineConfig({
     ios: false,
   },
   terserOptions: {},
+  dva: {
+    immer: true,
+    hmr: true,
+  },
 });

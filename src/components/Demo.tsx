@@ -1,7 +1,23 @@
 import React from 'react';
 import { dynamic } from 'umi';
+import { useModel } from '@@/plugin-model/useModel';
 
-const Demo = () => <div>I will render after 1s</div>;
+const Demo = () => {
+  const { count, increment } = useModel('useDemoModel', model => ({
+    count: model.count,
+    increment: model.increment,
+  }));
+
+  return (
+    <div
+      onClick={() => {
+        increment();
+      }}
+    >
+      I will render after {count}s
+    </div>
+  );
+};
 
 export default Demo;
 
