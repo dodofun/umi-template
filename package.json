@@ -37,10 +37,12 @@
     "yorkie": "^2.0.0"
   },
   "devDependencies": {
+    "@umijs/fabric": "^2.2.2",
     "@umijs/preset-ui": "^2.2.2",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "compression-webpack-plugin": "^4.0.0",
     "cssnano-preset-advanced": "^4.0.7",
+    "eslint": "^7.4.0",
     "eslint-plugin-react-hooks": "^4.0.8",
     "postcss-aspect-ratio-mini": "^1.0.1",
     "postcss-flexbugs-fixes": "^4.1.0",

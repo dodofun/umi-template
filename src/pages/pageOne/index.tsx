@@ -3,6 +3,8 @@ import styles from './index.less';
 import { Link } from 'umi';
 import { useDispatch, useSelector, useStore } from '@@/plugin-dva/exports';
 import { ThemeContext } from '@/utils/context';
+import Demo, { DemoAsync } from '@/components/Demo';
+import moment from 'moment';
 
 const LazyComponent = React.lazy(() => import('@/components/DemoLazy.tsx'));
 
@@ -16,7 +18,7 @@ export default (props: any) => {
   });
   // 获取 store
   const store = useStore();
-  console.log('store', store.getState());
+  console.log('store', store.getState(), moment());
 
   const [stateDemo, setStateDemo] = useState(() => {
     // 当初始化逻辑复杂时，可通过匿名函数来惰性初始化，该函数当且仅当初始化时被调用
@@ -48,6 +50,8 @@ export default (props: any) => {
         Page Demo {count}
       </h1>
       <Link to="/">To Index Page</Link>
+      <Demo />
+      <DemoAsync />
       <ThemeContext.Provider value="dark">
         <Suspense fallback={<div>Loading...</div>}>{lazuComponent}</Suspense>
       </ThemeContext.Provider>

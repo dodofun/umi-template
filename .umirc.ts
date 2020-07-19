@@ -102,10 +102,7 @@ export default defineConfig({
   ],
   plugins: [],
   polyfill: {
-    imports: [
-      'core-js/features/promise/try',
-      'core-js/proposals/math-extensions',
-    ],
+    imports: ['core-js/features/promise/try', 'core-js/proposals/math-extensions'],
   },
   targets: {
     chrome: 79,
@@ -119,4 +116,5 @@ export default defineConfig({
     immer: true,
     hmr: true,
   },
+  ignoreMomentLocale: true,
 });

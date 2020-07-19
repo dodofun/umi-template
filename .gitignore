@@ -9,6 +9,8 @@
 
 # production
 /dist
+/.vscode
+.idea
 
 # misc
 .DS_Store
@@ -18,6 +20,3 @@
 /src/.umi-production
 /src/.umi-test
 /.env.local
-
-# IDE
-.idea

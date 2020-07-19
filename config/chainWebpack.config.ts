@@ -10,7 +10,7 @@ const chainWebpack = (config, { webpack }) => {
       splitChunks: {
         chunks: 'all',
         automaticNameDelimiter: '.',
-        minSize: 30000,
+        minSize: 10000,
         minChunks: 1,
         maxAsyncRequests: 10,
         maxInitialRequests: 5,
@@ -25,13 +25,13 @@ const chainWebpack = (config, { webpack }) => {
             name: 'lodash',
             chunks: 'all',
             test: /[\\/]node_modules[\\/](lodash|lodash-decorators)[\\/]/,
-            priority: -12,
+            priority: -11,
           },
           antd: {
             name: 'antd',
             chunks: 'all',
             test: /[\\/]node_modules[\\/](@ant-design|antd|antd-mobile)[\\/]/,
-            priority: -11,
+            priority: -12,
           },
           default: {
             minChunks: 2,
