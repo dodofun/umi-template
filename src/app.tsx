@@ -1,4 +1,3 @@
-import React from 'react';
 import { request } from '@/utils/request';
 import { getInitialState } from './getInitialState';
 
