@@ -3,7 +3,7 @@ import { dynamic } from 'umi';
 import { useModel } from '@@/plugin-model/useModel';
 
 const Demo = () => {
-  const { count, increment } = useModel('useDemoModel', model => ({
+  const { count, increment } = useModel('useDemoModel', (model) => ({
     count: model.count,
     increment: model.increment,
   }));
@@ -23,7 +23,7 @@ export default Demo;
 
 // 异步化
 export const DemoAsync = dynamic({
-  loader: async function() {
+  async loader() {
     // 动态 import
     const { default: DemoLazy } = await import('./DemoLazy');
     return () => (

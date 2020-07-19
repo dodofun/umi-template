@@ -6,7 +6,7 @@ const IndexModel = {
   },
   effects: {
     *query({ payload }, { call, put, select }) {
-      let res = yield apiTest();
+      const res = yield apiTest();
 
       console.log('payload', payload, res);
 
@@ -21,7 +21,7 @@ const IndexModel = {
   reducers: {
     save(state, action) {
       console.log('action', action);
-      let count = state.count + 1;
+      const count = state.count + 1;
       return {
         ...state,
         count,

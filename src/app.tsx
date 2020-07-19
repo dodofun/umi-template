@@ -1,8 +1,8 @@
 import { request } from '@/utils/request';
-import { getInitialState } from './getInitialState';
 import React from 'react';
+import { getInitialState } from './getInitialState';
 
-/***
+/** *
  * 复写 render 渲染之前
  * @param oldRender
  */
@@ -11,7 +11,7 @@ const render = (oldRender: any) => {
   oldRender();
 };
 
-/***
+/** *
  * 修改路由
  * @param routes
  */
@@ -24,7 +24,7 @@ const patchRoutes = async (props: any) => {
   });
 };
 
-/***
+/** *
  * 路由更新时触发
  * @param props
  */

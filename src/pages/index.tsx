@@ -1,5 +1,4 @@
 import React, { useMemo, useState, Suspense, useEffect } from 'react';
-import styles from './index.less';
 import Demo, { DemoAsync } from '@/components/Demo';
 import {
   useHistory,
@@ -11,6 +10,7 @@ import {
 } from 'umi';
 import cloneDeep from 'lodash/cloneDeep';
 import { apiTest } from '@/services';
+import styles from './index.less';
 
 const LazyComponent = React.lazy(() => import('@/components/DemoLazy'));
 
@@ -30,7 +30,7 @@ export default (props: any) => {
   );
   console.log('initialState', initialState);
 
-  let cloneRes = cloneDeep({ name: 'TEST' });
+  const cloneRes = cloneDeep({ name: 'TEST' });
   console.log('cloneRes', cloneRes);
 
   // 注意：useMemo 会缓存上一次的结果，使用时需评估开销和收益

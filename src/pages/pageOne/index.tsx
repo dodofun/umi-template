@@ -1,10 +1,10 @@
 import React, { Suspense, useEffect, useMemo, useState } from 'react';
-import styles from './index.less';
 import { Link } from 'umi';
 import { useDispatch, useSelector, useStore } from '@@/plugin-dva/exports';
 import { ThemeContext } from '@/utils/context';
 import Demo, { DemoAsync } from '@/components/Demo';
 import moment from 'moment';
+import styles from './index.less';
 
 const LazyComponent = React.lazy(() => import('@/components/DemoLazy.tsx'));
 
@@ -13,7 +13,7 @@ export default (props: any) => {
   const dispatch = useDispatch();
   // 获取 state
   const count = useSelector((state: any) => {
-    const index = state.index;
+    const { index } = state;
     return index.count;
   });
   // 获取 store
