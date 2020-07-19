@@ -1,6 +1,6 @@
 import React from 'react';
 
-/***
+/**
  * 日志组件
  * @param Component
  */

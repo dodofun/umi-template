@@ -1,5 +1,6 @@
 import { request } from '@/utils/request';
 import { getInitialState } from './getInitialState';
+import React from 'react';
 
 /***
  * 复写 render 渲染之前
