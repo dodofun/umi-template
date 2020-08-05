@@ -1,9 +1,11 @@
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 const CompressionPlugin = require("compression-webpack-plugin");
+
 const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i;
 
 // @ts-ignore
-const chainWebpack = (config, { webpack }) => {
+const chainWebpack = (config) => {
   config.merge({
     optimization: {
       minimize: true,
