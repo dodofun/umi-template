@@ -47,6 +47,9 @@ https://dvajs.com/
 
 # ali hooks 库
 https://ahooks.js.org/
+
+# dumi
+https://d.umijs.org/
 ````
 
 ### 模块生产
