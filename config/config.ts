@@ -1,11 +1,14 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable global-require */
 import { defineConfig } from 'umi';
-import { routes } from './src/routes';
-import chainWebpack from './config/chainWebpack.config';
-import { proDefine } from './config/define/pro.env';
-import { devDefine } from './config/define/dev.env';
-import { commomDefine } from './config/define/common.env';
-import proxy from './config/proxy';
-const app = require('./package.json');
+import { routes } from '../src/routes';
+import chainWebpack from './chainWebpack.config';
+import { proDefine } from './define/pro.env';
+import { devDefine } from './define/dev.env';
+import { commomDefine } from './define/common.env';
+import proxy from './proxy';
+
+const app = require('../package.json');
 
 // @ts-ignore
 const PROD = ['production', 'prod'].includes(process.env.NODE_ENV);
